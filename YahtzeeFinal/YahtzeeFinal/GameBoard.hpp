@@ -21,6 +21,7 @@ private:
     
 public:
     GameBoard();
+    void Introduction();
     void displayGameBoard(int total[], int size, int scores[], int oSize);
     int finalScore(int total[], int size);
     
