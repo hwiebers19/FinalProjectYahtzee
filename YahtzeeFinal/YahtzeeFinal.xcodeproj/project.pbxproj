@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A6DE75811DEF870F003A56AF /* Dice.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A6DE757F1DEF870F003A56AF /* Dice.cpp */; };
+		A6DE75841DEF8725003A56AF /* GameBoard.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A6DE75821DEF8725003A56AF /* GameBoard.cpp */; };
+		A6DE75871DEF875E003A56AF /* Plays.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A6DE75851DEF875E003A56AF /* Plays.cpp */; };
 		A6E520B71DDBB36200294750 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A6E520B61DDBB36200294750 /* main.cpp */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +26,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A6DE757F1DEF870F003A56AF /* Dice.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Dice.cpp; sourceTree = "<group>"; };
+		A6DE75801DEF870F003A56AF /* Dice.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Dice.hpp; sourceTree = "<group>"; };
+		A6DE75821DEF8725003A56AF /* GameBoard.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameBoard.cpp; sourceTree = "<group>"; };
+		A6DE75831DEF8725003A56AF /* GameBoard.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = GameBoard.hpp; sourceTree = "<group>"; };
+		A6DE75851DEF875E003A56AF /* Plays.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Plays.cpp; sourceTree = "<group>"; };
+		A6DE75861DEF875E003A56AF /* Plays.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Plays.hpp; sourceTree = "<group>"; };
 		A6E520B31DDBB36200294750 /* YahtzeeFinal */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = YahtzeeFinal; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6E520B61DDBB36200294750 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -58,6 +67,12 @@
 			isa = PBXGroup;
 			children = (
 				A6E520B61DDBB36200294750 /* main.cpp */,
+				A6DE757F1DEF870F003A56AF /* Dice.cpp */,
+				A6DE75801DEF870F003A56AF /* Dice.hpp */,
+				A6DE75821DEF8725003A56AF /* GameBoard.cpp */,
+				A6DE75831DEF8725003A56AF /* GameBoard.hpp */,
+				A6DE75851DEF875E003A56AF /* Plays.cpp */,
+				A6DE75861DEF875E003A56AF /* Plays.hpp */,
 			);
 			path = YahtzeeFinal;
 			sourceTree = "<group>";
@@ -118,7 +133,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A6DE75811DEF870F003A56AF /* Dice.cpp in Sources */,
+				A6DE75841DEF8725003A56AF /* GameBoard.cpp in Sources */,
 				A6E520B71DDBB36200294750 /* main.cpp in Sources */,
+				A6DE75871DEF875E003A56AF /* Plays.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -237,6 +255,7 @@
 				A6E520BC1DDBB36200294750 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
