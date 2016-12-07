@@ -13,6 +13,15 @@
 #include <ctime>
 #include <cctype>
 #include <vector>
+#include <iostream>
+#include <iomanip>
+#include <cmath>
+#include <string>
+#include <ctime>
+#include <cstdlib>
+#include <cctype>
+#include <fstream>
+#include <vector>
 
 using namespace std;
 #include "Dice.hpp"
@@ -23,6 +32,7 @@ using namespace std;
 int main()
 {
  
+    
     // Welcome the user
     GameBoard GB;
     GB.Introduction();
@@ -170,7 +180,7 @@ int main()
         scores[12]=d.sumOfDice(dice, numDice);
         
         GB.displayGameBoard(total, numSec, scores, numDice);
-        
+        GB.TextfileGameBoard(total, numSec, scores, numDice);
         
     }
     

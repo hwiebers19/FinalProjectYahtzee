@@ -38,6 +38,7 @@ int Dice::rollDice()
 {
     return (rand()%6)+1;
 }
+
 //assigns random value
 //generated in roll dice function to each of the five dice
 void Dice::newRoll(int dice[], int size)
@@ -48,6 +49,7 @@ void Dice::newRoll(int dice[], int size)
         dice[i]=rollDice();
     }
 }
+
 //calculates the sum of dice
 int Dice::sumOfDice(int dice[], int numDice)
 {
@@ -59,6 +61,7 @@ int Dice::sumOfDice(int dice[], int numDice)
     }
     return sum;
 }
+
 //finds the smallest dice
 int Dice::smallestDice(int dice[], int numDice)
 {

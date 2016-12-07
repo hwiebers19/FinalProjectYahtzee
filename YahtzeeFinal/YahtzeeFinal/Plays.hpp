@@ -11,7 +11,8 @@
 
 #include <stdio.h>
 
-class Plays{
+class Plays
+{
 private:
     int values;
     int dice;

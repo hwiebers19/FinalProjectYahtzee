@@ -19,6 +19,7 @@ Plays::Plays()
 {
     
 }
+
 //counts total points in upper section
 //the upper section is the dice scores for 1 through 6
 void Plays::UpperSection(int values[], int dice[], int size)
@@ -34,6 +35,7 @@ void Plays::UpperSection(int values[], int dice[], int size)
         values [dice[k]-1]++;
     }
 }
+
 //sorts the roll of dice in order from smallest to largest
 void Plays::Sort(int dice[], int size)
 {
@@ -55,6 +57,7 @@ void Plays::Sort(int dice[], int size)
         dice[i]=temp;
     }
 }
+
 //returns true or false if dice are a run of a certain length
 bool Plays::passSequence(int dice[], int size, int start, int sequenceLength)
 {
@@ -110,6 +113,7 @@ bool Plays::getLargeStraight(int dice[], int size)
     }
     return false;
 }
+
 //determines if the values of the dice result in a full house
 //full house is 2 of a kind and 3 of a different kind
 bool Plays::getFullHouse(int occurences[], int size)
