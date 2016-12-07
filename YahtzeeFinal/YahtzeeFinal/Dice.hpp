@@ -18,7 +18,7 @@ private:
     int numDice;
     
 public:
-    Dice();
+    Dice(int dice[]);
     int rollDice();
     void newRoll(int dice[], int size);
     int sumOfDice(int dice[], int numDice);
