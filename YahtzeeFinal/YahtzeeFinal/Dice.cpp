@@ -15,8 +15,14 @@
 using namespace std;
 #include "Dice.hpp"
 
+
+Dice::Dice()
+{
+    
+}
+
 //creates a dice displays the dice to the player
-Dice::Dice(int dice[])
+void Dice:: displayDice (int dice[], int size)
 {
     //loops to display each index of the dice[] array
     for (int i=0; i<size; i++)
@@ -25,6 +31,7 @@ Dice::Dice(int dice[])
     }
     cout<<endl;
 }
+
 //rolls the dice
 //gives random number 1-6 for dice
 int Dice::rollDice()

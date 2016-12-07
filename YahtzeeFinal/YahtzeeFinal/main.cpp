@@ -24,7 +24,8 @@ int main()
 {
  
     // Welcome the user
-    introduction();
+    GameBoard GB;
+    GB.Introduction();
     
     // Define variables
     const int numDice=5;
@@ -47,11 +48,13 @@ int main()
     for (int t=0; t<13; t++)
     {
         // calls the function to roll a new set of dice
-        newRoll(dice, numDice);
+        Dice d;
+        d.newRoll(dice, numDice);
+        
         for (int p=1; p<3; p++)
         {
             // calls the function to display all 5 dice
-            displayDice(dice, numDice);
+            d.displayDice(dice, numDice);
             cout<<endl;
             cout<<"Do you want to keep any of these dice in this roll? "<<endl;
             cout<<"Type 0 to keep and 1 to re-roll all: ";
@@ -66,7 +69,7 @@ int main()
             // reroll all dice
             if (roll==1)
             {
-                newRoll (dice, numDice);
+                d.newRoll (dice, numDice);
             }
             //  keeps dice
             if (roll==0)
@@ -84,7 +87,7 @@ int main()
                     // rerolls dice
                     if(reRoll=='y')
                     {
-                        dice[j]=rollDice();
+                        dice[j]=d.rollDice();
                     }
                 }
             }
@@ -93,12 +96,13 @@ int main()
         }
         cout<<endl;
         
-        displayDice (dice,numDice);
+        d.displayDice (dice,numDice);
         
         cout<<endl;
         
         // tells the player the outcome of his roll
-        UpperSection (Upper, dice, numDice);
+        Plays P;
+        P.UpperSection (Upper, dice, numDice);
         for (int h=0; h<6;h++)
         {
             cout<< h+1<<" occurs "<<Upper[h]<<endl;
@@ -124,19 +128,19 @@ int main()
             // category 3 of a kind
             if (Upper[i]>=3)
             {
-                scores[6]=sumOfDice(dice, numDice);
+                scores[6]=d.sumOfDice(dice, numDice);
             }
             // category 4 of a kind
             if (Upper[i]>=4)
             {
-                scores[7]=sumOfDice(dice, numDice);
+                scores[7]=d.sumOfDice(dice, numDice);
             }
             // category Yahtzee and gives user 50 points when roll a second Yahtzee
             if (Upper[i]>=5)
             {
                 if(total[11]>0)
                 {
-                    scores[11]= sumOfDice(dice, numDice)+50;
+                    scores[11]= d.sumOfDice(dice, numDice)+50;
                 }
                 else
                 {
@@ -147,25 +151,25 @@ int main()
             
         }
         // sorts the dice to check if it is a straight
-        Sort(dice, numDice);
+        P.Sort(dice, numDice);
         // category small straight
-        if (hasSmallStraight(dice, numDice))
+        if (P.getSmallStraight(dice, numDice))
         {
             scores [9]= 30;
         }
         // category large straight
-        if (hasLargeStraight(dice, numDice))
+        if (P.getLargeStraight(dice, numDice))
         {
             scores[10]= 40;
         }
         // category full house
-        if (hasFullHouse(Upper, numDice))
+        if (P.getFullHouse(Upper, numDice))
         {
             scores [8]= 25;
         }
-        scores[12]=sumOfDice(dice, numDice);
+        scores[12]=d.sumOfDice(dice, numDice);
         
-        displayGameBoard(total, numSec, scores, numDice);
+        GB.displayGameBoard(total, numSec, scores, numDice);
         
         
     }
@@ -184,11 +188,11 @@ int main()
     int FinalPointTotal=0;
     if (tt>62)
     {
-        FinalPointTotal=finalScore(total,13)+35;
+        FinalPointTotal=GB.finalScore(total,13)+35;
     }
     else
     {
-        FinalPointTotal=finalScore(total,13);
+        FinalPointTotal=GB.finalScore(total,13);
     }
     cout<<"Your final score is: "<<FinalPointTotal<<endl;
     if(FinalPointTotal>= 250)
