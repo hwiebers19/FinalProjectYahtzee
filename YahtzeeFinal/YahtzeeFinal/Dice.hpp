@@ -19,11 +19,11 @@ private:
     
 public:
     Dice();
-    void displayDice (int dice[], int size);
     int rollDice();
     void newRoll(int dice[], int size);
     int sumOfDice(int dice[], int numDice);
     int smallestDice(int dice[], int numDice);
+    void displayDice (int dice[], int size);
     
     
     

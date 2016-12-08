@@ -23,17 +23,6 @@ Dice::Dice()
     numDice = 0;
 }
 
-//creates a dice displays the dice to the player
-void Dice:: displayDice (int dice[], int size)
-{
-    //loops to display each index of the dice[] array
-    for (int i=0; i<size; i++)
-    {
-        cout<<dice[i]<<" ";
-    }
-    cout<<endl;
-}
-
 //rolls the dice
 //gives random number 1-6 for dice
 int Dice::rollDice()
@@ -80,6 +69,16 @@ int Dice::smallestDice(int dice[], int numDice)
     return smallest;
 }
 
+//creates a dice displays the dice to the player
+void Dice:: displayDice (int dice[], int size)
+{
+    //loops to display each index of the dice[] array
+    for (int i=0; i<size; i++)
+    {
+        cout<<dice[i]<<" ";
+    }
+    cout<<endl;
+}
 
     
     

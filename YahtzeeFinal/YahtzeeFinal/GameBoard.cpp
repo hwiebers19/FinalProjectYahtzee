@@ -46,8 +46,8 @@ void GameBoard::Introduction()
     cout << "     then you will be given"<<endl;
     cout << "          a score of 0."<<endl;
     cout << endl;
+    
     cout<<"Enter your name: ";
-    string name;
     cin>>name;
     
     cout << endl << endl;
@@ -112,27 +112,31 @@ void GameBoard::displayGameBoard(int total[], int size, int scores[], int oSize)
     cout << "13 -Chance: " << total[12] << "   "<<endl;
     cout <<endl;
     
+    TextfileGameBoard(total, size, scores, oSize);
+    
 }
 
 
 //displayes the gameboard for the user using a txt file
-void GameBoard::TextfileGameBoard(int total[], int size, int scores[], int oSize)
+void GameBoard::TextfileGameBoard(int total[], int size, int scores[], int oSize, bool outputFinalScore)
 {
+    
+    
     //outputs a new textfile
     ofstream output;
     
     //opens that text file and declares name
     output.open ("GameBoard.txt", fstream::out);
     
-    
-    //string name;
-    //cin>>name;
-    //output << "Name of user is " << name << endl;
+   
+    output << "Name of user: " << name << endl;
+
+    output << " "<<endl;
     
     int category=0;
     
     //User picks category for scoring
-   
+    output << "CATEGORIES:" <<endl;
     output << "1 - Ones: " <<endl;
     output << "2 - Twos: " <<endl;
     output << "3 - Threes: " <<endl;
@@ -164,6 +168,7 @@ void GameBoard::TextfileGameBoard(int total[], int size, int scores[], int oSize
     
     
     //Displays the current points
+    output << "CURRENT SCORES: " <<endl;
     output << "1 - Ones: " << total[0] << "  "<<endl;
     output << "2 - Twos: " << total[1] << "  "<<endl;
     output << "3 - Threes: " << total[2] << "  "<<endl;
@@ -179,19 +184,49 @@ void GameBoard::TextfileGameBoard(int total[], int size, int scores[], int oSize
     output << "13 -Chance: " << total[12] << "   "<<endl;
     output <<endl;
     
+    if ( outputFinalScore )
+    {
+        output << "Your Final Score is: " << FinalFinalScore(total);
+    }
     //closes file
     output.close();
     
 }
 
+
 //adds up all points listed in gameboard
 //returns final score
 int GameBoard::finalScore(int total[], int size)
 {
+    
     int points=0;
     for (int i=0; i<size; i++)
     {
         points+=total[i];
     }
     return points;
+}
+
+int GameBoard:: FinalFinalScore (int total[])
+{
+    int tt=0;
+    
+    //to calculate the subtotal
+    for (int r=0; r<6; r++)
+    {
+        tt+=total[r];
+    }
+   
+    // tells the user their total points and if they won or not
+    int FinalPointTotal=0;
+    if (tt>62)
+    {
+        FinalPointTotal=finalScore(total,13)+35;
+    }
+    else
+    {
+        FinalPointTotal=finalScore(total,13);
+    }
+    return FinalPointTotal;
+
 }

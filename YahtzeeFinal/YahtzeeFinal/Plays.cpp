@@ -18,11 +18,11 @@ using namespace std;
 //creates the plays for the game
 Plays::Plays()
 {
-    values =0;
-    dice =0;
-    size =0;;
-    sequenceLength =0;;
-    occurances =0;
+    values = 0;
+    dice = 0;
+    size = 0;;
+    sequenceLength = 0;;
+    occurances = 0;
 }
 
 //counts total points in upper section

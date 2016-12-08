@@ -25,8 +25,10 @@ using namespace std;
 
 int main()
 {
-    // Welcome the user
+    // Welcome the user in the Gameboard class
     GameBoard GB;
+    
+    //calls Introduction from Gameboard class
     GB.Introduction();
     
     // Define variables
@@ -49,13 +51,16 @@ int main()
     // gives the player the dice in the roll and lets him keep his dice or roll again
     for (int t=0; t<13; t++)
     {
-        // calls the function to roll a new set of dice
+        // calls the function to roll a new set of dice from Dice class
         Dice d;
+        
+        //calls newRoll from Dice class
         d.newRoll(dice, numDice);
         
         for (int p=1; p<3; p++)
         {
             // calls the function to display all 5 dice
+            //calls displayDice from Dice class
             d.displayDice(dice, numDice);
             cout<<endl;
             cout<<"Do you want to keep any of these dice in this roll? "<<endl;
@@ -98,12 +103,15 @@ int main()
         }
         cout<<endl;
         
+        //calls displayDice from Dice class
         d.displayDice (dice,numDice);
         
         cout<<endl;
         
-        // tells the player the outcome of his roll
+        // tells the player the outcome of his roll from Plays class
         Plays P;
+        
+        //calls UpperSection from Plays class
         P.UpperSection (Upper, dice, numDice);
         for (int h=0; h<6;h++)
         {
@@ -173,11 +181,9 @@ int main()
         
     
         GB.displayGameBoard(total, numSec, scores, numDice);
-        GB.TextfileGameBoard(total, numSec, scores, numDice);
+        
 
     }
-    
-    
     
     int tt=0;
     
@@ -190,16 +196,14 @@ int main()
     
     cout<<endl;
     // tells the user their total points and if they won or not
-    int FinalPointTotal=0;
-    if (tt>62)
-    {
-        FinalPointTotal=GB.finalScore(total,13)+35;
-    }
-    else
-    {
-        FinalPointTotal=GB.finalScore(total,13);
-    }
+    int FinalPointTotal=GB.FinalFinalScore(total);
+    
+    GB.TextfileGameBoard(total, numSec, scores, numDice,true);
+    
     cout<<"Your final score is: "<<FinalPointTotal<<endl;
+    
+    cout<<" "<<endl;
+    
     if(FinalPointTotal>= 250)
     {
         cout<<"Congradulations, you win!!"<<endl;
@@ -209,6 +213,6 @@ int main()
         cout<<"Sorry you didn't get enough points to win"<<endl;
     }
     
-    
+
     return 0;
 }
