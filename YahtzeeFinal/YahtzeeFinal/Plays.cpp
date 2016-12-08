@@ -14,6 +14,7 @@
 #include <vector>
 using namespace std;
 #include "Plays.hpp"
+
 //creates the plays for the game
 Plays::Plays()
 {

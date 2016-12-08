@@ -13,13 +13,7 @@
 #include <ctime>
 #include <cctype>
 #include <vector>
-#include <iostream>
-#include <iomanip>
-#include <cmath>
-#include <string>
-#include <ctime>
 #include <cstdlib>
-#include <cctype>
 #include <fstream>
 #include <vector>
 
@@ -31,8 +25,6 @@ using namespace std;
 
 int main()
 {
- 
-    
     // Welcome the user
     GameBoard GB;
     GB.Introduction();
