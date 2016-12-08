@@ -18,7 +18,9 @@ using namespace std;
 
 Dice::Dice()
 {
-    
+    dice = 0;
+    size = 0;
+    numDice = 0;
 }
 
 //creates a dice displays the dice to the player

@@ -22,12 +22,17 @@ using namespace std;
 //creates a gameboard
 GameBoard::GameBoard()
 {
-    
+    total = 0;
+    size = 0;
+    scores = 0;
+    oSize = 0;
+    name;
 }
 
 //welcomes the user to the game
 void GameBoard::Introduction()
 {
+    
     cout << "  **********************************" << endl;
     cout << "  *             YAHTZEE            *" << endl;
     cout << "  **********************************" << endl;
@@ -47,6 +52,7 @@ void GameBoard::Introduction()
     
     cout << endl << endl;
 }
+
 
 //displayes the gameboard
 void GameBoard::displayGameBoard(int total[], int size, int scores[], int oSize)
@@ -108,6 +114,7 @@ void GameBoard::displayGameBoard(int total[], int size, int scores[], int oSize)
     
 }
 
+
 //displayes the gameboard for the user using a txt file
 void GameBoard::TextfileGameBoard(int total[], int size, int scores[], int oSize)
 {
@@ -115,30 +122,32 @@ void GameBoard::TextfileGameBoard(int total[], int size, int scores[], int oSize
     ofstream output;
     
     //opens that text file and declares name
-    output.open ("GameBoard.txt", fstream::out | fstream::app);
+    output.open ("GameBoard.txt", fstream::out);
+    
+    
+    //string name;
+    //cin>>name;
+    //output << "Name of user is " << name << endl;
     
     int category=0;
     
     //User picks category for scoring
-    cout << "Under what category would you like to record your score: "<<endl;
-    cout << "1 - Ones: " <<endl;
-    cout << "2 - Twos: " <<endl;
-    cout << "3 - Threes: " <<endl;
-    cout << "4 - Fours: " <<endl;
-    cout << "5 - Fives: " <<endl;
-    cout << "6 - Sixes: " <<endl;
-    cout << "7 - 3 of a Kind (3 of the same number): " <<endl;
-    cout << "8 - 4 of a Kind (4 of the same number): " <<endl;
-    cout << "9 - Full House (3 of a kind and a pair): " <<endl;
-    cout << "10 -Small Straight (Sequence of four): " <<endl;
-    cout << "11 -Large Straight  (Sequence of five): " <<endl;
-    cout << "12 -Yahtzee  (Five of the same number): " <<endl;
-    cout << "13 -Chance (Any combination): " <<endl;
+   
+    output << "1 - Ones: " <<endl;
+    output << "2 - Twos: " <<endl;
+    output << "3 - Threes: " <<endl;
+    output << "4 - Fours: " <<endl;
+    output << "5 - Fives: " <<endl;
+    output << "6 - Sixes: " <<endl;
+    output << "7 - 3 of a Kind (3 of the same number): " <<endl;
+    output << "8 - 4 of a Kind (4 of the same number): " <<endl;
+    output << "9 - Full House (3 of a kind and a pair): " <<endl;
+    output << "10 -Small Straight (Sequence of four): " <<endl;
+    output << "11 -Large Straight  (Sequence of five): " <<endl;
+    output << "12 -Yahtzee  (Five of the same number): " <<endl;
+    output << "13 -Chance (Any combination): " <<endl;
     
-    //get choice from user
-    cout << "Choice (1-13): "<<endl;
-    cin >> category ;
-    cout <<endl;
+    output << " "<<endl;
     
     //make sure the category is valid
     while (total[category-1]!=0)
@@ -155,20 +164,20 @@ void GameBoard::TextfileGameBoard(int total[], int size, int scores[], int oSize
     
     
     //Displays the current points
-    cout << "1 - Ones: " << total[0] << "  "<<endl;
-    cout << "2 - Twos: " << total[1] << "  "<<endl;
-    cout << "3 - Threes: " << total[2] << "  "<<endl;
-    cout << "4 - Fours: " << total[3] << "  "<<endl;
-    cout << "5 - Fives: " << total[4] << "  "<<endl;
-    cout << "6 - Sixes: " << total[5] << "  "<<endl;
-    cout << "7 - 3 of a Kind: " << total[6] << "  "<<endl;
-    cout << "8 - 4 of a Kind: " << total[7] << "  "<<endl;
-    cout << "9 - Full House: " << total[8] << "  "<<endl;
-    cout << "10 -Small Straight: " << total[9] << "  "<<endl;
-    cout << "11 -Large Straight: " << total[10] << "  "<<endl;
-    cout << "12 -Yahtzee: " << total[11] << "  "<<endl;
-    cout << "13 -Chance: " << total[12] << "   "<<endl;
-    cout <<endl;
+    output << "1 - Ones: " << total[0] << "  "<<endl;
+    output << "2 - Twos: " << total[1] << "  "<<endl;
+    output << "3 - Threes: " << total[2] << "  "<<endl;
+    output << "4 - Fours: " << total[3] << "  "<<endl;
+    output << "5 - Fives: " << total[4] << "  "<<endl;
+    output << "6 - Sixes: " << total[5] << "  "<<endl;
+    output << "7 - 3 of a Kind: " << total[6] << "  "<<endl;
+    output << "8 - 4 of a Kind: " << total[7] << "  "<<endl;
+    output << "9 - Full House: " << total[8] << "  "<<endl;
+    output << "10 -Small Straight: " << total[9] << "  "<<endl;
+    output << "11 -Large Straight: " << total[10] << "  "<<endl;
+    output << "12 -Yahtzee: " << total[11] << "  "<<endl;
+    output << "13 -Chance: " << total[12] << "   "<<endl;
+    output <<endl;
     
     //closes file
     output.close();

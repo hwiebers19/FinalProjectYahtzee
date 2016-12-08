@@ -171,10 +171,13 @@ int main()
         }
         scores[12]=d.sumOfDice(dice, numDice);
         
+    
         GB.displayGameBoard(total, numSec, scores, numDice);
         GB.TextfileGameBoard(total, numSec, scores, numDice);
-        
+
     }
+    
+    
     
     int tt=0;
     

@@ -17,6 +17,7 @@ private:
     int size;
     int scores;
     int oSize;
+    string name;
 
     
 public:
