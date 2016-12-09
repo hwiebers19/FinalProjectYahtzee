@@ -26,6 +26,7 @@ GameBoard::GameBoard()
     size = 0;
     scores = 0;
     oSize = 0;
+    category = 0;
     name;
 }
 
@@ -112,13 +113,13 @@ void GameBoard::displayGameBoard(int total[], int size, int scores[], int oSize)
     cout << "13 -Chance: " << total[12] << "   "<<endl;
     cout <<endl;
     
-    TextfileGameBoard(total, size, scores, oSize);
+    TextfileGameBoard(total, size, scores, oSize,category);
     
 }
 
 
 //displayes the gameboard for the user using a txt file
-void GameBoard::TextfileGameBoard(int total[], int size, int scores[], int oSize, bool outputFinalScore)
+void GameBoard::TextfileGameBoard(int total[], int size, int scores[], int oSize,int category, bool outputFinalScore)
 {
     
     
@@ -133,7 +134,6 @@ void GameBoard::TextfileGameBoard(int total[], int size, int scores[], int oSize
 
     output << " "<<endl;
     
-    int category=0;
     
     //User picks category for scoring
     output << "CATEGORIES:" <<endl;
@@ -153,18 +153,6 @@ void GameBoard::TextfileGameBoard(int total[], int size, int scores[], int oSize
     
     output << " "<<endl;
     
-    //make sure the category is valid
-    while (total[category-1]!=0)
-    {
-        
-        cout<<"Category has already been selected, please choose a different category"<<endl;
-        
-        cin>>category;
-        
-    }
-    
-    //set the array of total[] points to equal the score at the same index, the index being the category they choose-1
-    total [category-1]= scores[category-1];
     
     
     //Displays the current points

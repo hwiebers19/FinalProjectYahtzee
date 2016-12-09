@@ -36,6 +36,7 @@ int main()
     int roll=9;
     char reRoll;
     srand(time(NULL));
+    //srand(0);
     int dice[numDice];
     int Upper[6];
     

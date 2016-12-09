@@ -17,13 +17,13 @@ private:
     int size;
     int scores;
     int oSize;
+    int category;
     string name;
 
-    
 public:
     GameBoard();
     void Introduction();
-    void TextfileGameBoard(int total[], int size, int scores[], int oSize,bool outputFinalScore = false);
+    void TextfileGameBoard(int total[], int size, int scores[], int oSize, int category, bool outputFinalScore = false );
     void displayGameBoard(int total[], int size, int scores[], int oSize);
     int finalScore(int total[], int size);
     int FinalFinalScore (int total[]);
