@@ -19,11 +19,19 @@ private:
     int oSize;
     int category;
     string name;
+<<<<<<< HEAD
     
 public:
     GameBoard();
     void Introduction();
     void TextfileGameBoard(int total[], int size, int scores[], int oSize, int category, bool outputFinalScore = false);
+=======
+
+public:
+    GameBoard();
+    void Introduction();
+    void TextfileGameBoard(int total[], int size, int scores[], int oSize, int category, bool outputFinalScore = false );
+>>>>>>> 14d75978d511427d08bdb14f225b0ad779fdae17
     void displayGameBoard(int total[], int size, int scores[], int oSize);
     int finalScore(int total[], int size);
     int FinalFinalScore (int total[]);
