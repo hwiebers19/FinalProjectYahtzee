@@ -113,21 +113,16 @@ void GameBoard::displayGameBoard(int total[], int size, int scores[], int oSize)
     cout << "13 -Chance: " << total[12] << "   "<<endl;
     cout <<endl;
     
-<<<<<<< HEAD
+
     TextfileGameBoard(total, size, scores, oSize, category);
-=======
-    TextfileGameBoard(total, size, scores, oSize,category);
->>>>>>> 14d75978d511427d08bdb14f225b0ad779fdae17
+
     
 }
 
 
 //displayes the gameboard for the user using a txt file
-<<<<<<< HEAD
+
 void GameBoard::TextfileGameBoard(int total[], int size, int scores[], int oSize, int category, bool outputFinalScore)
-=======
-void GameBoard::TextfileGameBoard(int total[], int size, int scores[], int oSize,int category, bool outputFinalScore)
->>>>>>> 14d75978d511427d08bdb14f225b0ad779fdae17
 {
     
     
@@ -141,11 +136,6 @@ void GameBoard::TextfileGameBoard(int total[], int size, int scores[], int oSize
     output << "Name of user: " << name << endl;
 
     output << " "<<endl;
-    
-<<<<<<< HEAD
-    
-=======
->>>>>>> 14d75978d511427d08bdb14f225b0ad779fdae17
     
     //User picks category for scoring
     output << "CATEGORIES:" <<endl;
@@ -164,11 +154,6 @@ void GameBoard::TextfileGameBoard(int total[], int size, int scores[], int oSize
     output << "13 -Chance (Any combination): " <<endl;
     
     output << " "<<endl;
-    
-<<<<<<< HEAD
-    
-=======
->>>>>>> 14d75978d511427d08bdb14f225b0ad779fdae17
     
     
     //Displays the current points
