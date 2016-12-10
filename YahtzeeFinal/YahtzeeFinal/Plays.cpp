@@ -128,11 +128,12 @@ bool Plays::getFullHouse(int occurences[], int size)
     //loop through all the dice
     for(int i=0; i<size; i++)
     {
-        //
+        //checks to see if there is two of a kind for the full house
         if (occurences[i]==2)
         {
             hasTwo=true;
         }
+        //checks if there is three of a kind for the full house
         if (occurences[i]==3)
         {
             hasThree=true;

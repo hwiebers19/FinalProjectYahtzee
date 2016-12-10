@@ -10,7 +10,8 @@
 #define Plays_hpp
 
 #include <stdio.h>
-
+//plays class
+//this class checks if the dice from the play meet requirements for each of the sections 
 class Plays
 {
 private:

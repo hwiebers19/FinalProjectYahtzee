@@ -10,6 +10,8 @@
 #define GameBoard_hpp
 
 #include <stdio.h>
+//Gameboard class
+//this class totals the final score and outputs the gameboard
 class GameBoard
 {
 private:

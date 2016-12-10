@@ -10,6 +10,8 @@
 #define Dice_hpp
 
 #include <stdio.h>
+//our dice class
+//this class outputs information about the dice in the play
 class Dice
 {
 private:

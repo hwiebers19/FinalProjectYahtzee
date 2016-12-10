@@ -196,7 +196,7 @@ int main()
     cout<< "Your Upper Section Subtotal is: "<<tt;
     
     cout<<endl;
-    // tells the user their total points and if they won or not
+    // tells the user their total points
     int FinalPointTotal=GB.FinalFinalScore(total);
     
     GB.TextfileGameBoard(total, numSec, scores, numDice,true);
@@ -204,7 +204,7 @@ int main()
     cout<<"Your final score is: "<<FinalPointTotal<<endl;
     
     cout<<" "<<endl;
-    
+    // tells the user if they won or not
     if(FinalPointTotal>= 250)
     {
         cout<<"Congradulations, you win!!"<<endl;
