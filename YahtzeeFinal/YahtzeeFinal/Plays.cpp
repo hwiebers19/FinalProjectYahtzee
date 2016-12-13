@@ -29,12 +29,12 @@ Plays::Plays()
 //the upper section is the dice scores for 1 through 6
 void Plays::UpperSection(int values[], int dice[], int size)
 {
-    //
+    
     for (int i=0; i<6; i++)
     {
         values[i]=0;
     }
-    //
+    
     for (int k=0; k<size; k++)
     {
         values [dice[k]-1]++;
