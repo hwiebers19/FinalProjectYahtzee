@@ -173,7 +173,7 @@ void GameBoard::TextfileGameBoard(int total[], int size, int scores[], int oSize
     output << "13 -Chance: " << total[12] << "   "<<endl;
     output <<endl;
     
-    if ( outputFinalScore )
+    if ( outputFinalScore = true)
     {
         output << "Your Final Score is: " << FinalFinalScore(total);
     }

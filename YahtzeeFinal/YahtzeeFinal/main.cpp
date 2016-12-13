@@ -199,7 +199,7 @@ int main()
     // tells the user their total points
     int FinalPointTotal=GB.FinalFinalScore(total);
     
-    GB.TextfileGameBoard(total, numSec, scores, numDice,true);
+    GB.TextfileGameBoard(total, numSec, scores, numDice, true);
     
     cout<<"Your final score is: "<<FinalPointTotal<<endl;
     
